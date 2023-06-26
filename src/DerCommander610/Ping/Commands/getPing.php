@@ -14,12 +14,14 @@ class getPing extends Command{
 
     public function execute(CommandSender $sender, string $commandLabel, array $args){
         if($sender instanceof Player){
-            if(isset($args[0])){
-                $player = Server::getInstance()->getPlayerExact($args[0]);
-                $sender->sendMessage("§a" . $player->getName() . " Ping: §e" . $player->getNetworkSession()->getPing());
+            if($sender-<hasPermission("ping.command.use")){
+                if(isset($args[0])){
+                   $player = Server::getInstance()->getPlayerExact($args[0]);
+                   $sender->sendMessage("§a" . $player->getName() . " Ping: §e" . $player->getNetworkSession()->getPing());
             }
-            $player = Server::getInstance()->getPlayerExact($args[0]);
-            $sender->sendMessage("§aYour Ping: §e" . $player->getNetworkSession()->getPing());
+               $player = Server::getInstance()->getPlayerExact($args[0]);
+               $sender->sendMessage("§aYour Ping: §e" . $player->getNetworkSession()->getPing());
+            }
         }
     }
 }
