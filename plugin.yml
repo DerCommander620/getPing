@@ -1,0 +1,5 @@
+name: GetPing
+version: 1.0.0
+author: DerCommander610
+main: DerCommander610\Ping\Main
+api: [5.1.2]
