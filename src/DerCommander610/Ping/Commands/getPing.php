@@ -17,7 +17,7 @@ class getPing extends Command{
             if($sender->hasPermission("ping.command.use")){
                 if(isset($args[0])){
                    $player = Server::getInstance()->getPlayerExact($args[0]);
-                   $sender->sendMessage->("§a" . $player->getName() . " Ping: §e" . $player->getNetworkSession()->getPing());
+                   $sender->sendMessage("§a" . $player->getName() . " Ping: §e" . $player->getNetworkSession()->getPing());
             }
                 $player = Server::getInstance()->getPlayerExact($args[0]);
                 $sender->sendMessage("§aYour Ping: §e" . $player->getNetworkSession()->getPing());
