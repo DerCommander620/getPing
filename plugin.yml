@@ -6,7 +6,7 @@ api: [5.1.2]
 commands:
   getping:
     description: "Get a Players ping or your ping!"
-  
+    permission: ping.command.use
 
 permissions:
    ping.command.use:
