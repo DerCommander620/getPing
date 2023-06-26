@@ -18,6 +18,7 @@ class getPing extends Command{
                 $player = Server::getInstance()->getPlayerExact($args[0]);
                 $sender->sendMessage("§a" . $player->getName() . " Ping: §e" . $player->getNetworkSession()->getPing());
             }
+            $player = Server::getInstance()->getPlayerExact($args[0]);
             $sender->sendMessage("§aYour Ping: §e" . $player->getNetworkSession()->getPing());
         }
     }
